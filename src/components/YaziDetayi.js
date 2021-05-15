@@ -1,4 +1,5 @@
-import { Fragment, useEffect } from "react";
+import moment from "moment";
+import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { yaziGetir, yorumEkle } from "../actions";
@@ -33,7 +34,7 @@ const YaziDetayi = () => {
         </span>
       </h2>
 
-      <p> {yaziDetayi.created_at} </p>
+      <p> {moment(yaziDetayi.created_at).format('MMMM Do YYYY, h:mm:ss a')} </p>
 
       <p>{yaziDetayi.content}</p>
 

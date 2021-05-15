@@ -1,3 +1,4 @@
+import moment from "moment";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -26,7 +27,7 @@ const YaziListesi = () => {
               <Link to={`/posts/${yazi.id}`} className="header">
                 {yazi.title}
               </Link>
-              <div className="description">{yazi.created_at}</div>
+              <div className="description">{moment(yazi.created_at).format('MMMM Do YYYY, h:mm:ss a') }</div>
             </div>
           </div>
         );

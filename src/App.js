@@ -1,11 +1,12 @@
+import React from "react";
 import YaziListesi from "./components/YaziListesi";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import YaziDetayi from "./components/YaziDetayi";
 import YaziEkle from "./components/YaziEkle";
 import YaziDuzenle from "./components/YaziDuzenle";
 
 
-function App() {
+const App= ()=> {
   return (
     <Router>
       <div className="main_wrapper">
